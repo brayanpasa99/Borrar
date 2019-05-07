@@ -1,0 +1,123 @@
+'''
+1. Leer un número entero y retornar la suma de sus dígitos
+'''
+
+class Ronda1():
+
+    def leerNumero(self):
+
+        n = input("Ingrese un numero entero: ")
+
+        sn = str(n)
+        suma = 0
+
+        enteros = []
+
+        for i in range (0, len(sn)):
+
+            enteros.append(sn[i])
+
+        for i in range (0, len(enteros)):
+
+            enteros[i] = int(enteros[i])
+
+        for i in range (0, len(enteros)):
+
+            suma += enteros[i]
+
+        print(suma)
+
+class Ronda2():
+
+    def __init__(self):
+        pass
+
+    def principal(self):
+
+        suma = 0
+
+        lista = self.entregaArreglo()
+
+        for i in range(0, len(lista)):
+            lista[i] = int(lista[i])
+
+        for i in range(0, len(lista)):
+            suma += lista[i]
+
+        print(suma)
+
+    def entregaArreglo(self):
+
+        return [1, 10, 9, 0, 8, 7, 4, 8, 5, 10,- 100, 3, 1000, 100, 4, 8, 92, 4, 200, 75, 0, 4, 6]
+
+class Ronda3():
+
+    def __init__(self):
+        pass
+
+    def principal(self):
+        lista = self.entregaArreglo()
+        sumatotal = 0
+
+        for i in range(0, len(lista)):
+            sn = str(lista[i])
+            digitos = []
+
+            for j in range(0, len(sn)):
+                digitos.append(sn[j])
+
+
+            sumadigitos = len(digitos)
+            sumatotal += sumadigitos
+
+        print(sumatotal)
+
+    def entregaArreglo(self):
+
+        return [1, 100, 10, 222, 1082, 9230, 2198, 34, 0, 5]
+
+class Ronda4():
+
+    def __init__(self):
+        pass
+
+    def principal(self):
+
+        lista = self.entregaArreglo()
+        listainverso = []
+
+        mayor = max(lista)
+        cadena = ""
+        sm = str(mayor)
+
+
+        for i in range(0, len(sm)):
+            listainverso.append(sm[i])
+
+        listainverso.reverse()
+
+        for i in range(0, len(listainverso)):
+            cadena += listainverso[i]
+
+        for j in range(0, len(listainverso)):
+            print(cadena)
+
+
+    def entregaArreglo(self):
+        return [1, 100, 10, 222, 1082, 9230, 2198, 34, 0, 5, 9832]
+
+from Ronda1 import Ronda1
+from Ronda2 import Ronda2
+from Ronda3 import Ronda3
+from Ronda4 import Ronda4
+
+
+def main():
+    #Ronda1().leerNumero()
+    #Ronda2().principal()
+    #Ronda3().principal()
+    Ronda4().principal()
+
+
+if __name__ == "__main__":
+    main()
